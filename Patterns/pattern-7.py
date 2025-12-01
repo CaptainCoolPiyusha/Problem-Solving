@@ -1,4 +1,4 @@
-# Pattern 6
+# Pattern 7
 #         *    
 #       * * *   
 #     * * * * *  
@@ -7,12 +7,15 @@
 
 
 class Solution:
-    def pattern6(self, N):
-        for i in range(N, 0, -1): # 5 to 0
-            for j in range(1, i+1):
-                print(j, end=' ')
-            print() 
+    def pattern7(self, N):
+        for i in range(N):
+            # This will be one line, one pattern
+            print('  ' * (N-i-1), end='')   
+            print('* ' * ((i*2)+1), end='')
+            print('  ' * (N-i-1))
+            # After this there will be new line 
+                
 
 sol = Solution()
 N = 5
-sol.pattern6(N)
+sol.pattern7(N)
